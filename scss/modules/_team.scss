@@ -1,0 +1,86 @@
+.team {
+	padding-top: 75px;
+	padding-bottom: 100px;
+	&__title {
+		font:300 20px $title;
+		color: $dark-grey;
+		text-align: center;
+		margin-bottom: 35px;
+
+	}
+	&__desc {
+		color: $grey;
+		max-width: 39%;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 55px;
+	}
+	&__slider {
+
+		&-item {
+			padding: 0 3%;
+			justify-content: space-between;
+			margin-bottom: 60px;
+		}
+	}
+	&__img-wrap {
+		max-width: 30%;
+	}
+	&__text-wrap {
+		text-align: right;
+		max-width: 42%;
+		padding: 0 3%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: $grey;
+	}
+	&__name {
+		color: #464646;
+		font-size: 20px;
+		margin-bottom: 5px;
+		position: relative;
+		&::after {
+			content: '';
+			width: 4px;
+			height: 47px;
+			background: $green;
+			@include pos($r: -30px, $t: 3px);
+		}
+	}
+	&__position {
+		text-transform: uppercase;
+		font-style: italic;
+		margin-bottom: 30px;
+		font-weight: 300;
+	}
+
+}
+.slick-initialized .slick-slide {
+	display: flex;
+}
+
+.slick {
+
+	&-dots {
+		display: flex;
+		width: 50px;
+		justify-content: space-between;
+		margin: 0 auto;
+		button {
+			color: red;
+			@include size(10px);
+			border-radius: 40%;
+			color: transparent;
+			border: 1px solid $green;
+			background: #fff;
+			cursor: pointer;
+		}
+
+	}
+	&-active button {
+		@include size(10px);
+		border-radius: 40%;
+		background: $green;
+	}
+}

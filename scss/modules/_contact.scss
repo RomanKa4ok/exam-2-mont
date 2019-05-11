@@ -1,0 +1,16 @@
+.contact {
+	padding-top: 75px;
+	text-align: center;
+	&__title {
+		
+		font: 300 20px $title;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+	}
+	&__desc {
+		max-width: 39%;
+		color: $grey;
+		margin: 0 auto;
+		margin-bottom: 65px;
+	}
+}

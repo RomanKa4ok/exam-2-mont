@@ -1,0 +1,103 @@
+.header {
+	min-height: 100vh;
+	background: url('../images/header.jpg') top center no-repeat;
+	background-size: cover;
+	color: #fff;
+	padding-top: 35px;
+	&::after {
+		content: '';
+		width: 100vw;
+		height: 100vh;
+		@include pos($t:0, $l: 0);
+		background: #000;
+		opacity: .6;
+		z-index: 0; 
+		
+	}
+	&__container {
+		position: relative;
+		z-index: 99;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 200px;
+	}
+	&__logo {
+	
+	}
+	&__link {
+		
+	}
+	&__icon {
+		width: 100px;
+		height: 23px;
+	}
+	&__nav {
+	width: 30%;
+	display: flex;
+
+
+		&-menu {
+		display: flex;
+		font-size: 16px;
+		width: 100%;
+		justify-content: space-between;
+		}
+		
+		&-item {
+			width: 20%;
+		}
+		&-link {
+			text-decoration: none;
+			display: block;
+			color: #fff;
+			width: 120%;
+			text-align: center;
+			border-radius: 20px;
+			border: 1px solid transparent;
+			transition: all .3s;
+			&:hover {
+				background: rgba(255,255,255, .9);
+				color: $dark-grey;
+			}
+			&--active {
+				border: 1px solid #fff;
+				border-radius: 20px;
+			}
+		}
+	}
+	&__title {
+		font:300 35px/70px $title;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__desc {
+		margin: 0 auto;
+		width: 52%;
+		text-align: center;
+	}
+	&__scroll {
+	position: relative;
+		&-link {
+			display: block;
+			background: $green;
+			@include size(37px);
+			text-align: center;
+			border-radius: 47%;
+			color: #fff;
+			@include pos($l:50%, $b: -300px);
+			transform: translateX(-50%);
+
+			&::before {
+				content: '∨';
+				@include pos($t:5px, $l:14px);
+				color: #fff;
+				font-weight: 300;
+				font-size: 20px;
+			}
+		}
+	}
+}

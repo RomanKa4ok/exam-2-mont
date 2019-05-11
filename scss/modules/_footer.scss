@@ -1,0 +1,23 @@
+.footer {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-top: 75px;
+padding-bottom: 70px;
+	&__icon {
+		fill: #464646;
+		height: 20px;
+		margin-bottom: 20px;
+	}
+	&__copy {
+		color: $grey;
+		margin-bottom: 35px;
+	}
+	&__social {
+		display: flex;
+		width: 10%;
+		justify-content: space-between;
+		font-size: 25px;
+	}
+}
